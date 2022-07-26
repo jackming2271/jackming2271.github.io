@@ -11,13 +11,33 @@
     <content type="html"><![CDATA[<p>just a test</p><img src="/2022/07/26/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/first.png" class title="图片引用方法一">  ]]></content>
     
     
+    <categories>
+      
+      <category>Linux</category>
+      
+      <category>Hexo</category>
+      
+      <category>Tools</category>
+      
+      <category>PHP</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PS3</tag>
+      
+      <tag>Games</tag>
+      
+    </tags>
     
   </entry>
   
   
   
   <entry>
-    <title>Hello World</title>
+    <title>Hello Wo</title>
     <link href="/2022/07/26/hello-world/"/>
     <url>/2022/07/26/hello-world/</url>
     
