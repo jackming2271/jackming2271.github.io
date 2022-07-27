@@ -1,0 +1,862 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="jackming2271">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="2022-OS-Training-Comp-Daily-Schedule此文档为个人参加2022年开源操作系统训练营的工作记录   因对于操作系统&#x2F;基础软件的兴趣而来, 希望能够在本次活动中和大家一起努力, 争取有所收获 活动目标: 探索把现代系统语言Rust和灵活开放的系统结构RISC-V带入到操作系统的架构与设计的创新中来，思考未来的操作系统应该是什么样。 目录07&#x2F;07开">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2022-OS-Comp-Schedule记录">
+<meta property="og:url" content="https://jackming2271.github.io/2022/07/27/2022-OS-Comp-Schedule%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="JKM&#39;s Blog">
+<meta property="og:description" content="2022-OS-Training-Comp-Daily-Schedule此文档为个人参加2022年开源操作系统训练营的工作记录   因对于操作系统&#x2F;基础软件的兴趣而来, 希望能够在本次活动中和大家一起努力, 争取有所收获 活动目标: 探索把现代系统语言Rust和灵活开放的系统结构RISC-V带入到操作系统的架构与设计的创新中来，思考未来的操作系统应该是什么样。 目录07&#x2F;07开">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-27T05:24:09.000Z">
+<meta property="article:modified_time" content="2022-07-27T05:25:57.440Z">
+<meta property="article:author" content="jackming2271">
+<meta property="article:tag" content="操作系统">
+<meta property="article:tag" content="工作记录">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>2022-OS-Comp-Schedule记录 - JKM&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"jackming2271.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"gxzEfB5NUTiH5UAoOtieebOF-gzGzoHsz","app_key":"GhJcJzr1J4VNvbnYLHwXPgls","server_url":"https://gxzefb5n.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>JKM&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="2022-OS-Comp-Schedule记录"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-07-27 13:24" pubdate>
+          2022年7月27日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          29 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">2022-OS-Comp-Schedule记录</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="2022-OS-Training-Comp-Daily-Schedule"><a href="#2022-OS-Training-Comp-Daily-Schedule" class="headerlink" title="2022-OS-Training-Comp-Daily-Schedule"></a>2022-OS-Training-Comp-Daily-Schedule</h1><p>此文档为个人参加<a target="_blank" rel="noopener" href="https://github.com/LearningOS/rust-based-os-comp2022/blob/main/scheduling.md">2022年开源操作系统训练营</a>的工作记录  </p>
+<p>因对于操作系统&#x2F;基础软件的兴趣而来, 希望能够在本次活动中和大家一起努力, 争取有所收获</p>
+<p>活动目标: 探索把现代系统语言Rust和灵活开放的系统结构RISC-V带入到操作系统的架构与设计的创新中来，思考未来的操作系统应该是什么样。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>07&#x2F;07开始学习, 每周四至下周三为一个循环, 每周三完成周报 &#x2F; 每天晚上完成当日总结</p>
+<p><strong>第一阶段 (7月1日～7月31日)</strong>  </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>周四</th>
+<th>周五</th>
+<th>周六</th>
+<th>周天</th>
+<th>周一</th>
+<th>周二</th>
+<th>周三</th>
+<th>周报</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>07&#x2F;07 ~ 07&#x2F;13</td>
+<td><a href="#Day1">Day1</a></td>
+<td><a href="#Day2">Day2</a></td>
+<td><a href="#Day3">Day3</a></td>
+<td><a href="#Day4">Day4</a></td>
+<td><a href="#Day5">Day5</a></td>
+<td><a href="#Day6">Day6</a></td>
+<td><a href="#Day7">Day7</a></td>
+<td><a href="#Week1">第 1 周</a></td>
+</tr>
+<tr>
+<td>07&#x2F;14 ~ 07&#x2F;20</td>
+<td><a href="#Day8">Day8</a></td>
+<td><a href="#Day9">Day9</a></td>
+<td><a href="#Day10">Day10</a></td>
+<td><a href="#Day11">Day11</a></td>
+<td><a href="#Day12">Day12</a></td>
+<td><a href="#Day13">Day13</a></td>
+<td><a href="#Day14">Day14</a></td>
+<td><a href="#Week2">第 2 周</a></td>
+</tr>
+<tr>
+<td>07&#x2F;21 ~ 07&#x2F;27</td>
+<td><a href="#Day15">Day15</a></td>
+<td><a href="#Day16">Day16</a></td>
+<td><a href="#Day17-18">Day17</a></td>
+<td><a href="#Day17-18">Day18</a></td>
+<td><a href="#Day19">Day19</a></td>
+<td><a href="#Day20">Day20</a></td>
+<td><a href="#Day21">Day21</a></td>
+<td><a href="#Week3">第 3 周</a></td>
+</tr>
+</tbody></table>
+<h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>今天投入的全部时间都在做 rustlings , 目前进度 50&#x2F;84 , 明天争取搞定 rustlings<br>在完成 rustlings 的过程中, 发现对于 ?操作符 &#x2F; 枚举类型 &#x2F; 错误处理的部分有点遗忘, 有几个题有卡壳的情况<br>明天先快速过一遍 <a target="_blank" rel="noopener" href="https://course.rs/basic/compound-type/enum.html">Rust圣经</a> 然后再继续做</p>
+<h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><p>今天进度: rustlings 64&#x2F;84 , 发现rustlings后面的内容很多不熟悉 (模板 &#x2F; 共享指针 等)<br>还是和昨天一样, 配合着rust圣经一边看一边做题, 最后20道加油</p>
+<h2 id="Day3"><a href="#Day3" class="headerlink" title="Day3"></a>Day3</h2><p><strong>各方向进展</strong><br>Rust</p>
+<ul>
+<li>学习 [关联类型 &#x2F; 宏 &#x2F; 线程] 等部分</li>
+<li>完成 rustlings 84&#x2F;84</li>
+</ul>
+<h2 id="Day4"><a href="#Day4" class="headerlink" title="Day4"></a>Day4</h2><p>配置实验环境, 了解github classroom, 了解实验开发流程, 今日提交通过lab0-0 ， lab0-1</p>
+<h2 id="Day5"><a href="#Day5" class="headerlink" title="Day5"></a>Day5</h2><p>工作太忙，今天暂时没搞，o(╥﹏╥)o</p>
+<h2 id="Day6"><a href="#Day6" class="headerlink" title="Day6"></a>Day6</h2><p>学习指导书第三章及之前的部分，完成实验一 o(<em>￣︶￣</em>)o， 总结见<a target="_blank" rel="noopener" href="https://github.com/LearningOS/lab1-os3-zhaiqiming/blob/main/reports/lab1.md">实验报告1</a></p>
+<h2 id="Day7"><a href="#Day7" class="headerlink" title="Day7"></a>Day7</h2><p>今天学习lab2指导书, 完成了 sys_get_task_info &amp; sys_get_time , 主要是在内核中通过Page_table的虚实地址转换,查询系统调用传入地址的真实物理地址, 然后写入相关信息的过程</p>
+<h2 id="Week1"><a href="#Week1" class="headerlink" title="Week1"></a>Week1</h2><p><strong>第 1 周 总结 👨🏼‍🍳</strong><br>本周主要完成了以下内容:<br><strong>Rust:</strong></p>
+<ul>
+<li>学习Rust圣经, 完成rustling(84&#x2F;84)</li>
+</ul>
+<p><strong>自学risc-v系统结构:</strong>  </p>
+<ul>
+<li>复习CS61C部分内容, 之前做得CS61C实验: <a target="_blank" rel="noopener" href="https://github.com/zhaiqiming/CS61C">repo</a></li>
+</ul>
+<p><strong>基于Rust语言进行操作系统内核实验</strong>:  </p>
+<ul>
+<li>学习 Open-Source-OS-Training-Camp-2022 文档 , 完成lab0-0, lab0-1, lab1, lab2(除实验报告), lab3 正在开发中…  </li>
+<li>提出PR两个, 一个<a target="_blank" rel="noopener" href="https://github.com/LearningOS/rCore-Tutorial-Guide-2022S/pull/14">文档语法问题</a> , 一个 <a target="_blank" rel="noopener" href="https://github.com/LearningOS/rust-based-os-comp2022/pull/77">os4-ref的bug</a></li>
+</ul>
+<p><strong>经验总结🐝:</strong></p>
+<ol>
+<li>Rust不同于C++, 遇到不懂的Rust概念时, 可以结合操作系统或者编译的知识去理解, 最好不要借鉴C++ </li>
+<li>我写的Rust代码大概率首次是不会通过编译的😈, 可以先使用 cargo build –release 检查编译问题, 这样比make run速度会快很多</li>
+<li>代码需要高内聚, 这一点在lab2做得不好(在task模块做了很多mm模块的操作), 之后一定严格要求, 尽量在模块内部实现并以接口的方式提供给调用方</li>
+</ol>
+<p><strong>下周目标🐯:</strong><br><strong>Rust:</strong></p>
+<ul>
+<li>(32 Rust Quizes) -&gt; (exercisms.io 快速练习)</li>
+</ul>
+<p><strong>自学risc-v系统结构:</strong></p>
+<ul>
+<li>自学PPT for RISC-V特权指令级架构  </li>
+<li>自学RISC-V手册：一本开源指令集的指南 重点是第10章</li>
+</ul>
+<p><strong>基于Rust语言进行操作系统内核实验</strong>:  </p>
+<ul>
+<li>完成lab2, 3 ,4 ,5全部实验(代码 &amp; 报告)</li>
+</ul>
+<h2 id="Day8"><a href="#Day8" class="headerlink" title="Day8"></a>Day8</h2><p>学习lab3的代码</p>
+<h2 id="Day9"><a href="#Day9" class="headerlink" title="Day9"></a>Day9</h2><p>在lab3-os5中完成了向前兼容, 通过了usertests的全部内容</p>
+<h2 id="Day10"><a href="#Day10" class="headerlink" title="Day10"></a>Day10</h2><p>完成lab3-os5的全部代码, 通过所有测试(感觉stride测试样例的误差比较大, 最好把测试用例的时长都加大一点,这样就将不同进程的误差比降到了2以下), 同样还没写report😭, 最后一起写吧</p>
+<h2 id="Day11"><a href="#Day11" class="headerlink" title="Day11"></a>Day11</h2><p>学习lab4-os6的代码, 主要涉及文件系统, lab4之后的代码make run无法运行, 只能每次make test, 效率略微受到一点影响, 准备提一个issue,询问下助教老师</p>
+<h2 id="Day12"><a href="#Day12" class="headerlink" title="Day12"></a>Day12</h2><p>完成lab4-os6, 实现了link&#x2F;unlink&#x2F;fstat, 为文件系统增加多个新功能, 然后在OS完成接入;<br>实现过程中修复bug两个: [重复fs.lock &amp; link时忘记写disk_inode]</p>
+<h2 id="Day13"><a href="#Day13" class="headerlink" title="Day13"></a>Day13</h2><p>主要是阅读lab5的指导书, 这部分之前没做过, 估计会比较慢, 争取本周六24点之前完成lab5</p>
+<h2 id="Day14"><a href="#Day14" class="headerlink" title="Day14"></a>Day14</h2><p>暂无进度更新</p>
+<h2 id="Week2"><a href="#Week2" class="headerlink" title="Week2"></a>Week2</h2><p><strong>第 2 周 总结 👨🏼‍🍳</strong><br>本周的核心是推lab的进度, 主要完成了以下内容:  </p>
+<p>lab3: 实现Spawn系统调用 &#x2F; 实现基于stride的优先级调度, 实验报告待完成<br>lab4: 实现硬链接相关系统调用(link &#x2F; unlink &#x2F; fstat), 实验报告待完成</p>
+<p>经验总结🐝:  </p>
+<ol>
+<li><strong>关注核心问题, 而不是其他:</strong> 从lab4开始, os*-ref 目录下 make run 已经无法正常运行, 起初还想通过一些手段来fix这个问题. 调试了一天发现没啥进展, 在群里问了过了的其他同学, 直接make test就可以, 所以后面就没看这个问题了; 问题持续跟进, <a target="_blank" rel="noopener" href="https://github.com/LearningOS/rust-based-os-comp2022/issues/84">🔗issue</a> </li>
+<li><strong>敏捷迭代:</strong> 当添加的一块代码能进行测试时, 先编译测试, 然后再开发其他. 一次开发太多功能不容易测试, 不容易发现bug. 在 lab4 中, 一把梭完了三个系统调用, 首轮测试时样例一个没过😭, 一点点二分错误位置太痛苦了(尤其是重新make test还很慢233).</li>
+</ol>
+<p><strong>下周目标🐯:</strong><br><strong>Rust:</strong></p>
+<ul>
+<li>[可选] (32 Rust Quizes) -&gt; (exercisms.io 快速练习)</li>
+</ul>
+<p><strong>自学risc-v系统结构:</strong></p>
+<ul>
+<li>[可选] 自学PPT for RISC-V特权指令级架构  </li>
+<li>[必须] 自学RISC-V手册：一本开源指令集的指南 第10章 review</li>
+</ul>
+<p><strong>基于Rust语言进行操作系统内核实验</strong>:  </p>
+<ul>
+<li>[必须] 完成lab3, lab4 实验报告, 完成lab5实验代码 &amp; 报告</li>
+</ul>
+<h2 id="Day15"><a href="#Day15" class="headerlink" title="Day15"></a>Day15</h2><p>暂无进度</p>
+<h2 id="Day16"><a href="#Day16" class="headerlink" title="Day16"></a>Day16</h2><p>基本看完了第八章的内容， 感觉代码变动很大， 优先关注实验涉及到的代码， 看了下锁、信号量、条件变量的基本实现和使用</p>
+<h2 id="Day17-18"><a href="#Day17-18" class="headerlink" title="Day17-18"></a>Day17-18</h2><p>探索如何完成第八章练习，学习死锁相关知识（预防，避免，检测），这块在做的时候有些误区<strong>（因为OS基础不扎实）</strong>，整理一下完成本章练习的心路历程  </p>
+<ol>
+<li>起初，看到练习描述，感觉和银行家算法很相似，又看了rcore指导书看到了死锁避免的算法，感觉用这套流程去实现应该比较正确</li>
+<li>实现的过程中总觉得不对劲， 因为如果是套用银行家算法的话，每个线程能够运行完成需要的资源数组 Max 是没法维护的</li>
+<li>这时候还没意识到是算法选择不对（要选择死锁检测算法，而不是死锁预防算法），还是感觉只是算法不适用， 所以又搜索其他办法，在搜索过程中发现死锁检测和死锁预防的不同， 开始重新看练习描述， 看死锁检测的典型算法</li>
+<li>修改算法实现， 仅通过维护need alloc available，每次deadlock-check的时候只要判断是否每个线程都能开始运行就可以了</li>
+<li>通过全部test，完成全部练习，但是还是对死锁检测的运行原理没太搞懂，留个🔗<a href="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/#%E5%8A%9F%E8%83%BD%E6%80%BB%E7%BB%93-5">已更新</a> ，整理下原理， 之后填充上</li>
+</ol>
+<h2 id="Day19"><a href="#Day19" class="headerlink" title="Day19"></a>Day19</h2><p>开始写lab3、lab4、lab5实验报告</p>
+<h2 id="Day20"><a href="#Day20" class="headerlink" title="Day20"></a>Day20</h2><p>完成Lab3实验报告</p>
+<h2 id="Day21"><a href="#Day21" class="headerlink" title="Day21"></a>Day21</h2><p>完成Lab4 &#x2F; lab5实验报告!</p>
+<h2 id="Week3"><a href="#Week3" class="headerlink" title="Week3"></a>Week3</h2><p><strong>第 3 周 总结 👨🏼‍🍳</strong><br>本周主要完成了以下内容:  </p>
+<ol>
+<li>完成Lab5练习, 实现内核中的死锁检测</li>
+<li>完成Ch3~Ch8全部实验报告</li>
+<li>至此基本完成了 2022-OS-Comp一阶段的全部内容,主要包括:<ol>
+<li><p>在学习实践过程记录表上登记自己每日&#x2F;周学习记录情况的repo网址</p>
+<ul>
+<li>即本文所完成的工作</li>
+</ul>
+</li>
+<li><p>在第一阶段学习issues上的提问和回答问题情况, 的Pull Request提交情况（代码改进、文档改进、文档错误等）</p>
+<ul>
+<li>第一阶段OS学习项目: <a target="_blank" rel="noopener" href="https://github.com/LearningOS/rust-based-os-comp2022/pull/77">代码改进PR一个</a> , <a target="_blank" rel="noopener" href="https://github.com/LearningOS/rust-based-os-comp2022/issues/84">BUG一个</a></li>
+<li>rCore Tutorial v3的详细实验指导内容: <a target="_blank" rel="noopener" href="https://github.com/LearningOS/rCore-Tutorial-Guide-2022S/pull/14">描述错误一个</a></li>
+</ul>
+</li>
+<li><p>Rustling + OS-Lab(1~5) <a target="_blank" rel="noopener" href="https://github.com/orgs/LearningOS/repositories?q=zhaiqiming&type=all&language=&sort=">[Code]</a> <a href="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/">[Report]</a></p>
+</li>
+<li><p>个人收获总结 (待完成)</p>
+</li>
+</ol>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="category-chain-item">操作系统</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rcore/" class="category-chain-item">rcore</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">#操作系统</a>
+      
+        <a href="/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">#工作记录</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>2022-OS-Comp-Schedule记录</div>
+      <div>https://jackming2271.github.io/2022/07/27/2022-OS-Comp-Schedule记录/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>jackming2271</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年7月27日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+              <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                <i class="iconfont icon-sa"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/" title="rcore实验报告(全Lab1~5)">
+                        <span class="hidden-mobile">rcore实验报告(全Lab1~5)</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.4.17/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"gxzEfB5NUTiH5UAoOtieebOF-gzGzoHsz","appKey":"GhJcJzr1J4VNvbnYLHwXPgls","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
