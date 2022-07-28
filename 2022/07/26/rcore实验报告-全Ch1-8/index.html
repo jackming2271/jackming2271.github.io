@@ -19,12 +19,12 @@
     <meta name="description" content="本报告为个人在参与 2022年开源操作系统训练营 期间完成, 主要包括 6 个实验报告(对应 指导文档 中ch3~8), 内容涉及了操作系统中的 特权级切换&#x2F;进程调度&#x2F;虚拟内存管理&#x2F;多线程分析等 重点知识. Lab1-Ch3功能总结实现了sys_task_info系统调用,可以获取当前进程的 运行状态&#x2F;运行时长&#x2F;每种系统调用的使用次数  运行状态:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rcore实验报告(全Lab1~5)">
-<meta property="og:url" content="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/index.html">
+<meta property="og:url" content="https://jackming2271.xyz/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/index.html">
 <meta property="og:site_name" content="JKM&#39;s Blog">
 <meta property="og:description" content="本报告为个人在参与 2022年开源操作系统训练营 期间完成, 主要包括 6 个实验报告(对应 指导文档 中ch3~8), 内容涉及了操作系统中的 特权级切换&#x2F;进程调度&#x2F;虚拟内存管理&#x2F;多线程分析等 重点知识. Lab1-Ch3功能总结实现了sys_task_info系统调用,可以获取当前进程的 运行状态&#x2F;运行时长&#x2F;每种系统调用的使用次数  运行状态:">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/sv39-pte.png">
-<meta property="og:image" content="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/stride.png">
+<meta property="og:image" content="https://jackming2271.xyz/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/sv39-pte.png">
+<meta property="og:image" content="https://jackming2271.xyz/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/stride.png">
 <meta property="article:published_time" content="2022-07-26T06:39:27.000Z">
 <meta property="article:modified_time" content="2022-07-27T05:24:44.862Z">
 <meta property="article:author" content="jackming2271">
@@ -32,7 +32,7 @@
 <meta property="article:tag" content="rcore">
 <meta property="article:tag" content="实验报告">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/sv39-pte.png">
+<meta name="twitter:image" content="https://jackming2271.xyz/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/sv39-pte.png">
   
   
   
@@ -74,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"jackming2271.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"gxzEfB5NUTiH5UAoOtieebOF-gzGzoHsz","app_key":"GhJcJzr1J4VNvbnYLHwXPgls","server_url":"https://gxzefb5n.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"jackming2271.xyz","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"gxzEfB5NUTiH5UAoOtieebOF-gzGzoHsz","app_key":"GhJcJzr1J4VNvbnYLHwXPgls","server_url":"https://gxzefb5n.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -512,7 +512,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>rcore实验报告(全Lab1~5)</div>
-      <div>https://jackming2271.github.io/2022/07/26/rcore实验报告-全Ch1-8/</div>
+      <div>https://jackming2271.xyz/2022/07/26/rcore实验报告-全Ch1-8/</div>
     </div>
     <div class="license-meta">
       

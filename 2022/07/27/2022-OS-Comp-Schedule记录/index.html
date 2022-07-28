@@ -19,7 +19,7 @@
     <meta name="description" content="2022-OS-Training-Comp-Daily-Schedule此文档为个人参加2022年开源操作系统训练营的工作记录   因对于操作系统&#x2F;基础软件的兴趣而来, 希望能够在本次活动中和大家一起努力, 争取有所收获 活动目标: 探索把现代系统语言Rust和灵活开放的系统结构RISC-V带入到操作系统的架构与设计的创新中来，思考未来的操作系统应该是什么样。 目录07&#x2F;07开">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2022-OS-Comp-Schedule记录">
-<meta property="og:url" content="https://jackming2271.github.io/2022/07/27/2022-OS-Comp-Schedule%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:url" content="https://jackming2271.xyz/2022/07/27/2022-OS-Comp-Schedule%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="JKM&#39;s Blog">
 <meta property="og:description" content="2022-OS-Training-Comp-Daily-Schedule此文档为个人参加2022年开源操作系统训练营的工作记录   因对于操作系统&#x2F;基础软件的兴趣而来, 希望能够在本次活动中和大家一起努力, 争取有所收获 活动目标: 探索把现代系统语言Rust和灵活开放的系统结构RISC-V带入到操作系统的架构与设计的创新中来，思考未来的操作系统应该是什么样。 目录07&#x2F;07开">
 <meta property="og:locale" content="zh_CN">
@@ -70,7 +70,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"jackming2271.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"gxzEfB5NUTiH5UAoOtieebOF-gzGzoHsz","app_key":"GhJcJzr1J4VNvbnYLHwXPgls","server_url":"https://gxzefb5n.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"jackming2271.xyz","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"gxzEfB5NUTiH5UAoOtieebOF-gzGzoHsz","app_key":"GhJcJzr1J4VNvbnYLHwXPgls","server_url":"https://gxzefb5n.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -430,7 +430,7 @@
 <li>实现的过程中总觉得不对劲， 因为如果是套用银行家算法的话，每个线程能够运行完成需要的资源数组 Max 是没法维护的</li>
 <li>这时候还没意识到是算法选择不对（要选择死锁检测算法，而不是死锁预防算法），还是感觉只是算法不适用， 所以又搜索其他办法，在搜索过程中发现死锁检测和死锁预防的不同， 开始重新看练习描述， 看死锁检测的典型算法</li>
 <li>修改算法实现， 仅通过维护need alloc available，每次deadlock-check的时候只要判断是否每个线程都能开始运行就可以了</li>
-<li>通过全部test，完成全部练习，但是还是对死锁检测的运行原理没太搞懂，留个🔗<a href="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/#%E5%8A%9F%E8%83%BD%E6%80%BB%E7%BB%93-5">已更新</a> ，整理下原理， 之后填充上</li>
+<li>通过全部test，完成全部练习，但是还是对死锁检测的运行原理没太搞懂，留个🔗<a target="_blank" rel="noopener" href="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/#%E5%8A%9F%E8%83%BD%E6%80%BB%E7%BB%93-5">已更新</a> ，整理下原理， 之后填充上</li>
 </ol>
 <h2 id="Day19"><a href="#Day19" class="headerlink" title="Day19"></a>Day19</h2><p>开始写lab3、lab4、lab5实验报告</p>
 <h2 id="Day20"><a href="#Day20" class="headerlink" title="Day20"></a>Day20</h2><p>完成Lab3实验报告</p>
@@ -451,7 +451,7 @@
 <li>rCore Tutorial v3的详细实验指导内容: <a target="_blank" rel="noopener" href="https://github.com/LearningOS/rCore-Tutorial-Guide-2022S/pull/14">描述错误一个</a></li>
 </ul>
 </li>
-<li><p>Rustling + OS-Lab(1~5) <a target="_blank" rel="noopener" href="https://github.com/orgs/LearningOS/repositories?q=zhaiqiming&type=all&language=&sort=">[Code]</a> <a href="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/">[Report]</a></p>
+<li><p>Rustling + OS-Lab(1~5) <a target="_blank" rel="noopener" href="https://github.com/orgs/LearningOS/repositories?q=zhaiqiming&type=all&language=&sort=">[Code]</a> <a target="_blank" rel="noopener" href="https://jackming2271.github.io/2022/07/26/rcore%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%85%A8Ch1-8/">[Report]</a></p>
 </li>
 <li><p>个人收获总结 (待完成)</p>
 </li>
@@ -513,7 +513,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>2022-OS-Comp-Schedule记录</div>
-      <div>https://jackming2271.github.io/2022/07/27/2022-OS-Comp-Schedule记录/</div>
+      <div>https://jackming2271.xyz/2022/07/27/2022-OS-Comp-Schedule记录/</div>
     </div>
     <div class="license-meta">
       
